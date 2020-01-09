@@ -1,6 +1,6 @@
 <template>
 
-  <button v-bind:class="{'button-outline' : outline, 'button-clear' : clear}" >{{texte}}</button>
+  <button v-bind:class="{'button-outline' : outline, 'button-clear' : clear}" @click="boutonClique" >{{texte}}</button>
   
 
 </template>
@@ -17,9 +17,12 @@ export default {
       clear:Boolean, 
      
   },
-  
-  computed: {
 
+  
+  methods: {
+      boutonClique(evenement){
+          this.$emit('click',evenement)
+      }
   }
 };
 </script>

@@ -20,7 +20,12 @@ export default {
     VmBlockquote,
     VmHeading,
     VmBoutton
-  }
+  },
+  methods: {
+    clicSurunBoutton(evenement){
+      console.log('CLIC', evenement)
+    }
+  },
 };
 </script>
 
